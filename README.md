@@ -2,3 +2,4 @@
 御供孝太朗
 
 git@github.com:a24z7km/kadai4.git
+https://github.com/a24z7km/kadai4.git
