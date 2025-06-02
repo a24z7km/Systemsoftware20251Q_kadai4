@@ -4,3 +4,4 @@
 git@github.com:a24z7km/kadai4.git  
 https://github.com/a24z7km/kadai4.git  
 test1
+test2
