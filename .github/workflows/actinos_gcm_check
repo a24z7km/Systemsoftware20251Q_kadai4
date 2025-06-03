@@ -1,6 +1,0 @@
-name:action-check_cal_gcm
-on:[push]
-jobs
- runs-on:
-steps:
- - run
