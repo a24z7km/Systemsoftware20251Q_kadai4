@@ -46,7 +46,7 @@ run_error_test() {
 }
 
 # 正常系テスト
-run_test 12 186
+run_test 12 186 6
 run_test 100 25 25
 run_test 7 13 1
 run_test 48 180 12
