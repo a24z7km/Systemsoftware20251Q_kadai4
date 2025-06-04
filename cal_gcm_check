@@ -53,6 +53,7 @@ run_test 48 180
 
 # 異常系テスト
 run_error_test 0 18
+run_error_test 2 4 6
 run_error_test -5 10
 run_error_test 12.5 18
 run_error_test abc 18
