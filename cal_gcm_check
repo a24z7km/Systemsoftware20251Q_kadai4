@@ -3,7 +3,7 @@
 # 最大公約数シェルスクリプトのパス
 GCD_SCRIPT="./cal_gcm"
 
-# テスト関数
+# 正常系テスト関数
 run_test() {
     local input1=$1
     local input2=$2
@@ -27,7 +27,7 @@ run_test() {
     echo "テスト成功: $input1, $input2 -> $output"
 }
 
-# エラーテスト関数
+# 異常系テスト関数
 run_error_test() {
     local input1=$1
     local input2=$2
@@ -46,17 +46,20 @@ run_error_test() {
 }
 
 # 正常系テスト
-run_test 12 186 6
+run_test 2 4 2
+run_test 12 18 6
 run_test 100 25 25
 run_test 7 13 1
 run_test 48 180 12
 
 # 異常系テスト
-run_error_test 0 18
-run_error_test 2 4 6
-run_error_test -5 10
-run_error_test 12.5 18
-run_error_test abc 18
-run_error_test 12 xyz
-run_error_test 12
-run_error_test
+run_error_test 3          # 引数が1つ
+run_error_test 0 18       # 0を含む
+run_error_test -5 10      # 負の数
+run_error_test 12.5 18    # 小数
+run_error_test abc 18     # 文字列
+run_error_test 12 xyz     # 文字列
+run_error_test 12         # 引数が少ない
+run_error_test            # 引数がない
+run_error_test 12 18 6    # 引数が多い
+run_error_test 1000000000000000000 25 # 極度に大きい数
