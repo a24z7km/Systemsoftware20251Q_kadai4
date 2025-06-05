@@ -59,4 +59,4 @@ run_error_test 12 xyz     # 文字列
 run_error_test 12         # 引数が少ない
 run_error_test            # 引数がない
 run_error_test 12 18 6    # 引数が多い
-run_error_test 1000000000000000000 25 # 極度に大きい数
+run_error_test 1000000000000000000000 25 # 極度に大きい数
