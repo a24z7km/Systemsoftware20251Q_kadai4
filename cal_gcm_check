@@ -29,20 +29,17 @@ run_test() {
 
 # 異常系テスト関数
 run_error_test() {
-    local input1=$1
-    local input2=$2
-
     # 実行結果を取得
-    $GCD_SCRIPT $input1 $input2 >/dev/null 2>&1
+    $GCD_SCRIPT "$@" >/dev/null 2>&1
     exit_code=$?
 
     # 結果を検証
     if [ $exit_code -eq 0 ]; then
-        echo "テスト失敗: $input1, $input2 -> 正常終了 (期待値: エラー終了)" >&2
+        echo "テスト失敗: $@ -> 正常終了 (期待値: エラー終了)" >&2
         exit 1
     fi
 
-    echo "テスト成功: $input1, $input2 -> エラー終了"
+    echo "テスト成功: $@ -> エラー終了"
 }
 
 # 正常系テスト
